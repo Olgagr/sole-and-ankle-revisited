@@ -49,7 +49,7 @@ const OverlayWrapper = styled(DialogOverlay)`
   right: 0;
   display: flex;
   justify-content: flex-end;
-  background-color: hsla(220deg 5% 40% / 0.8);
+  background-color: var(--color-backdrop);
 `;
 
 const ContentWrapper = styled(DialogContent)`
@@ -76,10 +76,10 @@ const Nav = styled.nav`
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
-    color: ${COLORS.gray[900]};
+    color: var(--color-gray-900);
 
     &:hover {
-      color: ${COLORS.secondary};
+      color: var(--color-secondary);
     }
   }
 `;
@@ -92,7 +92,7 @@ const Footer = styled.footer`
 
   a {
     display: block;
-    color: ${COLORS.gray[700]};
+    color: var(--color-gray-700);
     font-size: 0.875rem;
     text-decoration: none;
 
@@ -101,7 +101,7 @@ const Footer = styled.footer`
     }
 
     &:hover {
-      color: ${COLORS.secondary};
+      color: var(--color-secondary);
     }
   }
 `;
