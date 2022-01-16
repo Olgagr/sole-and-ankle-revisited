@@ -27,9 +27,9 @@ const Header = () => {
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
           <NavLink href="/men">Men</NavLink>
-          <NavLink href="/women">Women</NavLink>
-          <NavLink href="/kids">Kids</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/women">Women&nbsp;sdfdsf</NavLink>
+          <NavLink href="/kids">Kidsdsfdsf</NavLink>
+          <NavLink href="/collections">Collectionssdfdsfds</NavLink>
         </Nav>
         <SideR>
           <MobileActionButtons>
@@ -61,7 +61,7 @@ const MainHeader = styled.div`
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
 
-  @media ${QUERIES.MAX_LAPTOP} {
+  @media ${QUERIES.MAX_TABLET} {
     justify-content: space-between;
     align-items: center;
   }
@@ -74,7 +74,9 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: clamp(1rem, 7.2vw - 5.5rem, 3rem);
   margin: 0px 48px;
 
   @media ${QUERIES.MAX_TABLET} {
@@ -85,7 +87,7 @@ const Nav = styled.nav`
 const SideL = styled.div`
   flex: 1;
 
-  @media ${QUERIES.MAX_LAPTOP} {
+  @media ${QUERIES.MAX_TABLET} {
     flex: revert;
   }
 `;
