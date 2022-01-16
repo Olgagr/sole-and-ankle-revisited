@@ -47,7 +47,6 @@ const OverlayWrapper = styled(DialogOverlay)`
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 1;
   display: flex;
   justify-content: flex-end;
   background-color: hsla(220deg 5% 40% / 0.8);
