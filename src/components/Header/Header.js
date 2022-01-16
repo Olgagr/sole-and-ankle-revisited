@@ -32,15 +32,17 @@ const Header = () => {
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
         <SideR>
-          <UnstyledButton>
-            <IconWrapper id="shopping-bag" strokeWidth={2} />
-          </UnstyledButton>
-          <UnstyledButton>
-            <IconWrapper id="search" strokeWidth={2} />
-          </UnstyledButton>
-          <UnstyledButton>
-            <IconWrapper id="menu" strokeWidth={2} />
-          </UnstyledButton>
+          <MobileActionButtons>
+            <UnstyledButton>
+              <IconWrapper id="shopping-bag" strokeWidth={2} />
+            </UnstyledButton>
+            <UnstyledButton>
+              <IconWrapper id="search" strokeWidth={2} />
+            </UnstyledButton>
+            <UnstyledButton>
+              <IconWrapper id="menu" strokeWidth={2} />
+            </UnstyledButton>
+          </MobileActionButtons>
         </SideR>
       </MainHeader>
 
@@ -58,6 +60,16 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+
+  @media ${QUERIES.MAX_LAPTOP} {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media ${QUERIES.MAX_PHONE} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 const Nav = styled.nav`
@@ -72,24 +84,26 @@ const Nav = styled.nav`
 
 const SideL = styled.div`
   flex: 1;
+
+  @media ${QUERIES.MAX_LAPTOP} {
+    flex: revert;
+  }
 `;
 
 const SideR = styled.div`
   flex: 1;
 
-  & > * {
-    display: none;
+  @media ${QUERIES.MAX_TABLET} {
+    flex: revert;
   }
+`;
+
+const MobileActionButtons = styled.div`
+  display: none;
 
   @media ${QUERIES.MAX_TABLET} {
-    flex-basis: auto;
-    display: flex;
-    justify-content: flex-end;
     gap: 45px;
-
-    & > * {
-      display: revert;
-    }
+    display: flex;
   }
 
   @media ${QUERIES.MAX_PHONE} {
